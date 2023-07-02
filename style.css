@@ -35,7 +35,6 @@ body{
 
 .titles{
     display: flex;
-    gap: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     justify-content: space-between;
@@ -49,15 +48,34 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: transparent;
-    border-radius: 15px;
+    transition-duration: 800ms;
+    user-select: none;
 }
 
 .title1{
-    border: 2px solid #FF5F5D;
+    border-right: 1px solid  rgba(255, 255, 255, 0.144);
+    border-left: 2px solid rgba(255, 255, 255, 0.144);
+    color: #FF5F5D;
 }
 
+.title1:hover{
+    border-right: 1px solid  #FF5F5D;
+    border-left: 2px solid #FF5F5D;
+    color: white;
+    background-color:#ff605d34;
+}
+
+
 .title2{
-    border: 2px solid #00CCBF ;
+    border-left: 1px solid rgba(255, 255, 255, 0.144);
+    border-right: 2px solid rgba(255, 255, 255, 0.144);
+    color: #00CCBF;
+}
+.title2:hover{
+    border-right: 2px solid  #00CCBF;;
+    border-left: 1px solid #00CCBF;
+    color: white;
+    background-color:#00ccbe2e;
 }
 
 .listElementBtn{
@@ -67,6 +85,7 @@ body{
     color: white;
     width: 100%;
     cursor: pointer;
+    word-break: break-all;
     transition-duration: 300ms;
 }
 
@@ -74,18 +93,24 @@ body{
     border-bottom: 1px solid #00CCBF;
 }
 
+.green:hover{
+    color: #00CCBF;
+    border-bottom: 1px solid white;
+}
+
 .red{
     border-bottom: 1px solid #FF5F5D;
 }
 
-.listElementBtn:hover{
-    color: rgb(138, 138, 138);
+.red:hover{
+    color: #FF5F5D;
+    border-bottom: 1px solid white;
 }
+
 
 .container{
     display: flex;
     gap: 10px;
-    /* justify-content: space-between; */
 }
 
 .todo-cont{
@@ -111,6 +136,7 @@ body{
     cursor: pointer;
     transition-duration: 700ms;
     padding: 3px 10px;
+    user-select: none;
 }
 
 .addElBtn:hover{

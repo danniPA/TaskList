@@ -9,16 +9,23 @@ function addElem() {
     if(input.value.length >= 3){
         arrTodo.push(input.value)
         input.value = ""
+        saveData()
         render()
     } else{
         alert('Please enter more letters')
     }
 }
 
+function saveData() {
+    localStorage.setItem("todo", JSON.stringify(arrTodo))
+    localStorage.setItem("done", JSON.stringify(arrDone))
+}
+
 function moveToDone(elem) {
     let arrIdx = arrTodo.indexOf(elem)
     arrTodo.splice(arrIdx, 1) 
     arrDone.push(elem)
+    saveData()
     render()
 }
 
@@ -26,12 +33,16 @@ function moveToToDo(elem) {
     let arrIdx = arrDone.indexOf(elem)
     arrDone.splice(arrIdx, 1) 
     arrTodo.push(elem)
+    saveData()
     render()
 }
 
 function render() {
     todo.innerHTML = ''
     done.innerHTML = ''
+    arrTodo = JSON.parse(localStorage.getItem("todo"))
+    arrDone = JSON.parse(localStorage.getItem("done"))
+
     arrTodo.forEach(element => {
         let elemToDo = document.createElement('div')
         elemToDo.textContent = element
