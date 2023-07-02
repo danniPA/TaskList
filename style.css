@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    background-color: #154B52;
+    color: white;
+    font-size: 35px;
+    width: 800px;
+    padding: 10px;
+}
+
+@media screen and (max-width:810px){
+    .logo{
+        width: 100%;
+    }
+}
+
+
+body{
+    background-color: #000B0D;
+    padding: 15px;
+}
+
+.list{
+    color: white;
+    font-size:25px;
+}
+
+.titles{
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.title{
+    color:  white;
+    flex: 1;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.title1{
+    border: 2px solid #FF5F5D;
+}
+
+.title2{
+    border: 2px solid #00CCBF ;
+}
+
+.listElementBtn{
+    font-size: 20px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+.green{
+    border-bottom: 1px solid #00CCBF;
+}
+
+.red{
+    border-bottom: 1px solid #FF5F5D;
+}
+
+.listElementBtn:hover{
+    color: rgb(138, 138, 138);
+}
+
+.container{
+    display: flex;
+    gap: 10px;
+    /* justify-content: space-between; */
+}
+
+.todo-cont{
+    flex: 1;
+}
+
+.done-cont{
+    flex: 1;
+}
+
+.elementAddPanel{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px 0 0 0;
+    flex-wrap: wrap;
+}
+
+.addElBtn{
+    color: white;
+    border: 2px solid #00CCBF ;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 700ms;
+    padding: 3px 10px;
+}
+
+.addElBtn:hover{
+    background-color: #00CCBF;
+    color: black;
+}
+
+.elName{
+    padding: 5px;
+    border: none;
+}
+
+.elName:focus{
+    outline: none;
+}
