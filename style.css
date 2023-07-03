@@ -5,6 +5,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.wrapper{
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
 .logos{
     margin: 0 auto;
     text-align: center;
@@ -177,3 +183,4 @@ body{
 .elName:focus{
     outline: none;
 }
+
