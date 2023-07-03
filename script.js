@@ -7,6 +7,7 @@ let arrDone = [];
 
 function addElem() {
     if(input.value.length >= 3){
+        console.log(input.value)
         arrTodo.push(input.value)
         input.value = ""
         saveData()
