@@ -10,26 +10,52 @@
 <body>
     <div class="wrapper">
         <div class="logos">
-            <div class="logo logo_task">Tasks</div>
-            <div class="logo logo_settings">Settings</div>
+            <div class="logo logo_task picked" onclick="openMain()">Tasks</div>
+            <div class="logo logo_settings unpicked" onclick="openSett()">Settings</div>
+            <div class="logo logo_about unpicked" onclick="openAbout()">About</div>
         </div>
     
-        <div class="elementAddPanel">
-            <input type="text" placeholder="Enter your task..." class="elName">
-            <div class="addElBtn" onclick="addElem()">Add!</div>
-        </div>
+        <div class="main-cont">
+            <div class="elementAddPanel">
+                <input type="text" placeholder="Enter your task..." class="elName">
+                <div class="addElBtn" onclick="addElem()">Add!</div>
+            </div>
+            
+            <div class="titles">
+                <div class="title title1">TO DO</div>
+                <div class="title title2">DONE</div>
+            </div>
         
-        <div class="titles">
-            <div class="title title1">TO DO</div>
-            <div class="title title2">DONE</div>
+        
+            <div class="container">
+                <div class="todo-cont">
+                    <!-- <div class="cont">
+                        <div class="listElementBtn red">Hello</div> 
+                        <div class="button-delete">❌</div>
+                    </div> -->
+                </div>
+                <div class="done-cont">
+                </div>
+            </div>
+            
         </div>
-    
-    
-        <div class="container">
-            <div class="todo-cont">
+        <div class="settings-cont">
+            <div class="theme-logo">Theme</div>
+            <div class="theme">
+                <div class="button LTBtn text" onclick="lightThemeSwitch()">Light</div>
+                <div class="button DTBtn text" onclick="darkThemeSwitch()">Dark</div>
             </div>
-            <div class="done-cont">
+
+            <div class="theme-logo">Language</div>
+            <div class="theme">
+                <div class="button t-btn-picked text langBtn" onclick="">English</div>
+                <div class="button text langBtn" onclick="">Українська</div>
             </div>
+        </div>
+
+        <div class="about-cont">
+            This is the app that can help you create list of tasks.<br><br>
+            Made by Dan Panov
         </div>
     </div>
 
