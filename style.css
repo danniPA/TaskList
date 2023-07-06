@@ -2,7 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    transition: 200ms;
+}
+
+.dark-theme{
+    color: white;
+    border-color: white;
+    background-color:#00161a;
+    text-decoration-color: white;
+    border-color: white;
+}
+
+.light-theme{
+    color: black;
+    border-color: black;
+    background-color: white;
+    text-decoration-color: gray;
+    border-color: black;
 }
 
 .wrapper{
@@ -15,52 +32,66 @@
     margin: 0 auto;
     text-align: center;
     border-radius: 20px 20px 0 0;
-    background-color: #154B52;
-    color: white;
+    /* background-color: #154B52; */
     font-size: 35px;
     width: 800px;
     /* padding: 10px; */
     user-select: none;
     display: flex;
 }
-
-@media screen and (max-width:810px){
-    .logos{
-        width: 100%;
-    }
-}
-
+.text {
+    width: 20%;
+  }
 .logo{
-    flex: 1;
     padding: 10px;
     transition: 700ms;
 }
 
-.logo:hover{
-    flex: 3;
-    background-color: #2abbce; 
-    cursor: pointer;
-}
 
-.logo_task{
-    flex: 3;
-    background-color: #268895;  
+
+.logo_task{  
     border-radius: 20px 0 0 0;
 }
 
-.logo_settings{
-    background-color: #154B52;  
+.logo_task:hover{  
+    flex: 3;
+    background-color: #32b1c2;   
+    cursor: pointer;
+}
+
+.logo_settings:hover{
+    flex: 3;
+    background-color: #32b1c2;  
+    cursor: pointer;
+}
+
+.logo_about:hover{
+    flex: 3;
+    background-color: #32b1c2;  
+    cursor: pointer;
+}
+
+.logo_about{
     border-radius: 0 20px 0 0;
 }
 
+.picked{
+    flex: 3;
+    background-color: #268895; 
+    color: white; 
+}
+
+.unpicked{
+    flex: 1;
+    background-color: #154b52;  
+    color: rgb(209, 208, 208);
+}
 
 body{
-    background-color: #000B0D;
     padding: 15px;
 }
 
 .list{
-    color: white;
     font-size:25px;
 }
 
@@ -72,7 +103,6 @@ body{
 }
 
 .title{
-    color:  white;
     flex: 1;
     text-align: center;
     font-size: 25px;
@@ -92,7 +122,6 @@ body{
 .title1:hover{
     border-right: 1px solid  #FF5F5D;
     border-left: 2px solid #FF5F5D;
-    color: white;
     background-color:#ff605d34;
 }
 
@@ -105,20 +134,10 @@ body{
 .title2:hover{
     border-right: 2px solid  #00CCBF;;
     border-left: 1px solid #00CCBF;
-    color: white;
+
     background-color:#00ccbe2e;
 }
 
-.listElementBtn{
-    font-size: 20px;
-    padding: 10px;
-    background-color: transparent;
-    color: white;
-    width: 100%;
-    cursor: pointer;
-    word-break: break-all;
-    transition-duration: 300ms;
-}
 
 .green{
     border-bottom: 1px solid #00CCBF;
@@ -126,7 +145,7 @@ body{
 
 .green:hover{
     color: #00CCBF;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid;
 }
 
 .red{
@@ -135,13 +154,42 @@ body{
 
 .red:hover{
     color: #FF5F5D;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid;
+    text-decoration-line: line-through;
 }
 
 
 .container{
     display: flex;
     gap: 10px;
+}
+.listElementBtn{
+    font-size: 20px;
+    padding: 10px;
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+    word-break: break-all;
+    transition-duration: 300ms;
+}
+
+.cont{
+    display: flex;
+    font-size: 20px;
+}
+
+.button-delete{
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: 400ms;
+    height: 50%;
+}
+
+.button-delete:hover{
+    /* margin: 2px; */
+    background-color: #ff605d5a;
+    border-radius: 0 10px 10px 0;
 }
 
 .todo-cont{
@@ -161,7 +209,6 @@ body{
 }
 
 .addElBtn{
-    color: white;
     border: 2px solid #00CCBF ;
     border-radius: 5px;
     cursor: pointer;
@@ -177,10 +224,109 @@ body{
 
 .elName{
     padding: 5px;
-    border: none;
+    /* border: none; */
+    border: 1px solid #001e23;
+    border-radius: 5px;
 }
 
 .elName:focus{
     outline: none;
 }
 
+/* settings */
+
+.settings-cont{
+    font-size: 40px;
+    display: none;
+}
+
+.theme-logo{
+    font-size: 24px;
+    text-align: center;
+    margin: 20px;
+}
+
+.about-cont{
+    font-size: 24px;
+    display: none;
+    text-align: center;
+    margin: 20px;
+}
+
+.main-cont{
+    transition: 500ms;
+}
+
+.theme{
+    display: flex;
+    justify-content: space-around;
+}
+.button{
+    /* width: 20%; */
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid;
+    user-select: none;
+    cursor: pointer;
+    padding: 5px;
+    /* margin-right:100px;
+    margin-left:100px; */
+    transition: 340ms;
+}
+
+.LTBtn:hover{
+    background-color:white;
+    color:black;
+}
+
+.DTBtn:hover{
+    background-color:#001e23;
+    color:white;
+    border-color: #001e23;
+}
+
+.t-btn-picked{
+    color:#0094ae;
+}
+
+.langBtn:hover{
+    border-color: #0094ae;
+}
+
+
+
+@media screen and (max-width:810px){
+    .logos{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .text {
+        width: 30%;
+    }
+    .logos,.about-cont{
+        font-size: 25px;
+    }
+    .listElementBtn{
+        font-size: 20px;
+    }
+    .button-delete{
+        font-size: 16px;
+    }
+}
+  
+  @media (max-width: 450px) {
+    .text {
+        width: 47%;
+    }
+    .logos,.about-cont{
+        font-size: 20px;
+    }
+    .listElementBtn{
+        font-size: 15px;
+    }
+    .button-delete{
+        font-size: 13px;
+    }
+}
